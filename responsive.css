@@ -1,0 +1,77 @@
+/* Base styles using relative units */
+:root {
+  --base-font-size: 16px;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Container class for content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive typography */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+p { font-size: 1rem; }
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: calc(var(--base-font-size) * 0.85);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    columns: 1;
+    padding: 0 0.5rem;
+  }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+}
+
+/* Tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: calc(var(--base-font-size) * 0.95);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: var(--base-font-size);
+  }
+  .container {
+    columns: 5;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: calc(var(--base-font-size) * 1.1);
+  }
+}

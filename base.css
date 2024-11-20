@@ -1,0 +1,119 @@
+:root {
+    --red: #ff4654;
+    --dark-red: #ba3a46;
+    --dark-blue: #111823;
+    --light-blue: #2596be;
+    --black: #090d13;
+    --white: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-blue);
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    padding-right: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    gap: 3rem;
+}
+
+header > :first-child {
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--red);
+}
+
+.container {
+    columns: 5;
+    column-gap: 1rem;
+    padding: 1rem;
+    max-height: 90vh;
+}
+
+.columns, .collection {
+    break-inside: avoid;
+    margin: 0 0 0.5rem 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.collection h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.item {
+    height: 80px;
+    width: 80%;
+    background-color: var(--white);
+    margin: 0.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    align-content: flex-end;
+}
+
+.item p {
+    margin: 0.1rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 100%;
+    padding: 0.2rem;
+}
+
+.item-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.item:hover {
+    border: 2px solid var(--black);
+}
+.player-card img {
+    width: 80%;
+    height: auto;
+    margin: 0.5rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.player-card img:hover {
+    border: 2px solid var(--black);
+}
