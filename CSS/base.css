@@ -70,6 +70,7 @@ header a:hover {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 
 .item {
@@ -116,4 +117,33 @@ header a:hover {
 
 .player-card img:hover {
     border: 2px solid var(--black);
+}
+
+.thumbnails-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.thumb-prev, .thumb-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.thumb-prev {
+    left: 0;
+}
+
+.thumb-next {
+    right: 0;
 }
